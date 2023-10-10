@@ -1,7 +1,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var inputText = "";
+    @State var v1: Int = 0
+    @State var v2: Int = 0
+    @State var op: String = ""
+    @State var reuslt: String = "";
+    @State var inputText: String
     var body: some View {
         VStack {
             Spacer()
@@ -11,40 +15,37 @@ struct ContentView: View {
             }
             Spacer()
             HStack{
-                CustomTextField(text: $inputText);
+                CustomTextField(text: $reuslt);
             }
             HStack{
-                ButtonNumber(number: "1");
-                ButtonNumber(number: "2");
-                ButtonNumber(number: "3");
+                ButtonNumber(number: "1", v1: $v1, v2: $v2, op: $op);
+                ButtonNumber(number: "2", v1: $v1, v2: $v2, op: $op);
+                ButtonNumber(number: "3", v1: $v1, v2: $v2, op: $op);
             }
             HStack{
-                ButtonNumber(number: "4");
-                ButtonNumber(number: "5");
-                ButtonNumber(number: "6");
+                ButtonNumber(number: "4", v1: $v1, v2: $v2, op: $op);
+                ButtonNumber(number: "5", v1: $v1, v2: $v2, op: $op);
+                ButtonNumber(number: "6", v1: $v1, v2: $v2, op: $op);
             }
             HStack{
-                ButtonNumber(number: "7");
-                ButtonNumber(number: "8");
-                ButtonNumber(number: "9");
+                ButtonNumber(number: "7", v1: $v1, v2: $v2, op: $op);
+                ButtonNumber(number: "8", v1: $v1, v2: $v2, op: $op);
+                ButtonNumber(number: "9", v1: $v1, v2: $v2, op: $op);
             }
             HStack{
-                ButtonNumber(number: "0");
-                ButtonNumber(number: "+");
-                ButtonNumber(number: "-");
+                ButtonNumber(number: "0", v1: $v1, v2: $v2, op: $op);
+                ButtonNumber(number: "+", v1: $v1, v2: $v2, op: $op);
+                ButtonNumber(number: "-", v1: $v1, v2: $v2, op: $op);
             }
             HStack{
-                ButtonNumber(number: "*");
-                ButtonNumber(number: "/");
-                ButtonNumber(number: "sin");
+                ButtonNumber(number: "*", v1: $v1, v2: $v2, op: $op);
+                ButtonNumber(number: "/", v1: $v1, v2: $v2, op: $op);
+                ButtonNumber(number: "sin", v1: $v1, v2: $v2, op: $op);
             }
             HStack{
-                CalculateButton();
+                CalculateButton(v1: $v1, v2: $v2, op: $op, result: $reuslt, inputText: $inputText)
             }
         }
         .padding()
     }
-}
-#Preview {
-    ContentView()
 }

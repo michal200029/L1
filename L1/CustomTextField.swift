@@ -8,7 +8,3 @@ struct CustomTextField: View {
             .border(Color.black, width: 2)
     }
 }
-
-#Preview {
-    CustomTextField(text: .constant(""))
-}
