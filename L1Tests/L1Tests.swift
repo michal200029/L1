@@ -1,10 +1,3 @@
-//
-//  L1Tests.swift
-//  L1Tests
-//
-//  Created by Dawid Nalepa on 09/10/2023.
-//
-
 import XCTest
 @testable import L1
 

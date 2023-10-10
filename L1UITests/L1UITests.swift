@@ -1,10 +1,3 @@
-//
-//  L1UITests.swift
-//  L1UITests
-//
-//  Created by Dawid Nalepa on 09/10/2023.
-//
-
 import XCTest
 
 final class L1UITests: XCTestCase {
